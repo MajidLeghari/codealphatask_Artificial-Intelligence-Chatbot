@@ -1,0 +1,184 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Chat Container */
+.chat-container {
+    width: 450px;
+    height: 650px;
+
+    background: white;
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+/* Header */
+.chat-container h1 {
+    background: #2563eb;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 22px;
+}
+
+/* Chat Messages Area */
+#chatBox {
+    flex: 1;
+
+    padding: 20px;
+
+    overflow-y: auto;
+
+    background: #f8fafc;
+}
+
+/* Each Message */
+#chatBox p {
+    margin-bottom: 15px;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    max-width: 85%;
+
+    line-height: 1.5;
+}
+
+/* Input Area */
+.input-area {
+    display: flex;
+
+    padding: 15px;
+
+    background: white;
+
+    border-top: 1px solid #ddd;
+}
+
+/* Input */
+.input-area input {
+    flex: 1;
+
+    padding: 12px 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+/* Input Focus */
+.input-area input:focus {
+    border-color: #2563eb;
+}
+
+/* Send Button */
+.input-area button {
+    margin-left: 10px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+/* Button Hover */
+.input-area button:hover {
+    background: #1d4ed8;
+}
+
+/* Scrollbar */
+#chatBox::-webkit-scrollbar {
+    width: 6px;
+}
+
+#chatBox::-webkit-scrollbar-thumb {
+    background: #bbb;
+
+    border-radius: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+
+    .chat-container {
+        width: 95%;
+        height: 90vh;
+    }
+
+    .chat-container h1 {
+        font-size: 19px;
+    }
+
+    /* Common message styling */
+    .message {
+        padding: 12px 15px;
+
+        margin-bottom: 12px;
+
+        border-radius: 12px;
+
+        max-width: 80%;
+
+        line-height: 1.5;
+
+        word-wrap: break-word;
+    }
+    /* User message */
+    .user-message {
+        margin-left: auto;
+
+        background: #2563eb;
+
+        color: white;
+
+        border-bottom-right-radius: 3px;
+    }
+
+    /* Bot message */
+    .bot-message {
+        margin-right: auto;
+
+        background: #e5e7eb;
+
+        color: #111827;
+
+        border-bottom-left-radius: 3px;
+    }
+}
+```
